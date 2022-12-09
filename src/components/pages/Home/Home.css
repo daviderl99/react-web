@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.container__item {
+  width: 50%;
+  height: 100%;
+  padding: 100px 0;
+  filter: grayscale(1);
+  transition: 0.2s;
+}
+
+.container_btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 50%;
+  left: 40%;
+
+  color: white;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.container_btn-jobs {
+  background-color: #48b6ff;
+}
+.container_btn-workers {
+  background-color: #ffbf48;
+}
+
+.container__item:hover {
+  filter: grayscale(0);
+}
+
+.container__item-jobs {
+  background-image: url('../../../shared/images/jobs.jpg');
+  background-repeat: no-repeat;
+}
+
+.container__item-workers {
+  background-image: url('../../../shared/images/workers.jpg');
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .container__item {
+    margin: 25px;
+  }
+}
